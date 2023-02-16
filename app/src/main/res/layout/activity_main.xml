@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+    <Button
+        android:id="@+id/simple_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simple Code"
+        android:layout_margin="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/simple_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
+        android:text="time difference (ms):  "
+        android:layout_margin="30dp"
+        app:layout_constraintTop_toBottomOf="@id/simple_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/simple_content"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        />
+
+    <TextView
+        android:id="@+id/simple_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
+        tools:text="0"
+        android:layout_margin="30dp"
+        app:layout_constraintTop_toTopOf="@id/simple_title"
+        app:layout_constraintStart_toEndOf="@id/simple_title"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        />
+
+    <Button
+        android:id="@+id/caper_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Caper Code"
+        android:layout_margin="30dp"
+        android:backgroundTint="@color/teal_200"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/caper_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
+        android:text="time difference (ms):  "
+        android:layout_margin="30dp"
+        app:layout_constraintTop_toBottomOf="@id/caper_button"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toStartOf="@id/caper_content"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        />
+
+    <TextView
+        android:id="@+id/caper_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
+        tools:text="0"
+        android:layout_margin="30dp"
+        app:layout_constraintTop_toBottomOf="@id/caper_button"
+        app:layout_constraintStart_toEndOf="@id/caper_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
